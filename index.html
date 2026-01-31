@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio</title>
+    <title>Greats Company</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,13 +20,27 @@
       </section>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Our Profile</a></li>
-          <li><a href="#">Portofolio</a></li>
-          <li><a href="#">Message Us</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#our-profile">Our Profile</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#message-us">Message Us</a></li>
         </ul>
       </nav>
+      <button id="navToggle" class="nav-toggle" aria-label="Open menu"><span></span></button>
     </header>
+
+    <div id="mobileOverlay" class="mobile-overlay"></div>
+    <aside id="mobileSidebar" class="mobile-sidebar">
+      <button id="closeSidebar" class="close-sidebar">×</button>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#our-profile">Our Profile</a></li>
+          <li><a href="#portofolio">Portofolio</a></li>
+          <li><a href="#message-us">Message Us</a></li>
+        </ul>
+      </nav>
+    </aside>
 
     <section id="greetingModal" class="modal">
       <div class="modal-content">
@@ -57,20 +71,17 @@
       <h2>Our Profile</h2>
       <div class="profile-content">
         <div class="profile-text">
-          <h3>About Us</h3>
+          <h3>About Greats Company</h3>
           <p>
-            Greats Company is a leading firm in delivering quality and value to
-            our customers. We specialize in innovative solutions that drive
-            success and growth.
+            Greats Company menyediakan jasa pembuatan website profesional, termasuk desain responsif, toko online, dan integrasi sistem manajemen konten.
           </p>
-          <h3>Our Mission</h3>
+          <h3>Services We Offer</h3>
           <ul>
-            <li>Provide exceptional services to all clients</li>
-            <li>Exceed expectations and deliver quality results</li>
-            <li>Foster long-term relationships based on trust</li>
-            <li>Maintain integrity in all business dealings</li>
-            <li>Drive innovation and continuous improvement</li>
-            <li>Support sustainable growth and success</li>
+            <li>Desain website responsif dan modern</li>
+            <li>Pembuatan e-commerce dan integrasi pembayaran</li>
+            <li>Pengembangan CMS dan fitur kustom</li>
+            <li>Optimasi performa dan SEO dasar</li>
+            <li>Maintenance dan dukungan teknis</li>
           </ul>
         </div>
         <div class="profile-image">
@@ -109,6 +120,64 @@
         </div>
       </div>
     </section>
+
+    <section id="message-us">
+        <h2>Message Us</h2>
+        <div class="message-container">
+          <form id="messageForm" class="card" novalidate>
+            <label for="msg-name">Name:</label>
+            <input type="text" id="msg-name" name="name" required />
+            <div class="error" data-for="msg-name"></div>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+            <div class="error" data-for="dob"></div>
+
+            <label>Gender:</label>
+            <div class="gender-group">
+              <label><input type="radio" name="gender" value="Male" /> Male</label>
+              <label><input type="radio" name="gender" value="Female" /> Female</label>
+            </div>
+            <div class="error" data-for="gender"></div>
+
+            <label for="msg-text">Message:</label>
+            <textarea id="msg-text" name="message" rows="5" required></textarea>
+            <div class="error" data-for="msg-text"></div>
+
+            <button type="submit">Send Message</button>
+          </form>
+
+          <div id="resultCard" class="card">
+            <div class="result-empty"></div>
+            <div class="result-fields">
+              <p><strong>Nama:</strong> <span id="res-name"></span></p>
+              <p><strong>Date:</strong> <span id="res-dob"></span></p>
+              <p><strong>Gender:</strong> <span id="res-gender"></span></p>
+              <p><strong>Pesan:</strong></p>
+              <div id="res-text"></div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-address">
+          <h4>Our Office</h4>
+          <p>Jl. Contoh No.123<br />Jakarta, Indonesia</p>
+          <p>Phone: (021) 123-4567</p>
+        </div>
+
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#our-profile">Our Profile</a></li>
+            <li><a href="#portofolio">Portofolio</a></li>
+            <li><a href="#message-us">Message Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-bottom">© 2026 Greats Company</div>
+    </footer>
 
     <script src="./js/main.js"></script>
   </body>
