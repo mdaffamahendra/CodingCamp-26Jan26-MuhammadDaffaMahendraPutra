@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const name = nameInput.value.trim();
 
     if (name === "") {
-      welcomeMessage.textContent = `Hi Tamu, Welcome to Or Company`;
+      welcomeMessage.textContent = `Hi Tamu, Welcome to Our Company`;
     } else {
-      welcomeMessage.textContent = `Hi ${name}, Welcome to Or Company`;
+      welcomeMessage.textContent = `Hi ${name}, Welcome to Our Company`;
     }
 
     modal.classList.add("hidden");
